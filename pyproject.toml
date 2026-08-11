@@ -1,0 +1,39 @@
+[project]
+name = "papersmith"
+version = "0.1.0"
+description = "Turn research papers into small, tested reference implementations"
+readme = "README.md"
+authors = [
+    { name = "Saswat Priyadarshan", email = "psaswat21@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "agno>=2.8.7",
+    "arxiv>=4.0.1",
+    "duckduckgo-search>=8.1.1",
+    "lancedb>=0.36.0",
+    "litellm>=1.96.0",
+    "pydantic>=2.13.4",
+    "pypdf>=6.15.0",
+    "python-dotenv>=1.2.2",
+    "rich>=15.0.0",
+    "sqlalchemy>=2.0.0",
+    "aiosqlite>=0.20.0",
+    "fastapi>=0.115.0",
+    "typer>=0.27.1",
+    "streamlit>=1.38",
+]
+
+[build-system]
+requires = ["uv_build>=0.10.7,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
